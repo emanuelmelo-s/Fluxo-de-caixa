@@ -66,7 +66,8 @@ class CentroCustoController extends Controller
     public function edit(int $id)
     {
         $centro = CentroCusto::find($id);
-        return view('centro.form')->with(compact('centro'));
+        $tipos = Tipo::orderBy('tipo')->get();
+        return view('centro.form')->with(compact('centro','tipos'));
     }
 
     /**

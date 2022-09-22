@@ -18,7 +18,7 @@
         <div class="row">
             <div class="form-group col-md-6">
               <label for="centro" class="form-label">Centro de Custo*</label>
-              <input type="text" name="centro_custo" id="centro_custo" value="{{$centro ? $centro->tipo : old('centro')}}" required class="form-control">
+              <input type="text" name="centro_custo" id="centro_custo" value="{{$centro ? $centro->centro_custo : old('centro')}}" required class="form-control">
             </div>
 
             <div class="form-group col-md-4">
