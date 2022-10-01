@@ -19,6 +19,7 @@ return new class extends Migration
             $table->bigInteger('id_centro_custo');
             $table->date('dt_faturamento');
             $table->string('descricao')->nullable();
+            $table->string('arquivo')->nullable();
             $table->text('observacoes')->nullable();
             $table->timestamps();
             $table->softDeletes();

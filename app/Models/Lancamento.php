@@ -16,11 +16,11 @@ class Lancamento extends Model
     protected $table = 'lancamentos';
     protected $primaryKey = 'id_lancamento';
     protected $dates = ['dt_faturamento' , 'created_at' , 'updated_at' , 'deleted_at'];
-    protected $fillable = ['id_user' , 'id_centro_custo' , 'descricao' , 'observacoes'];
+    protected $fillable = ['id_user' , 'id_centro_custo' , 'descricao' , 'observacoes','dt_faturamento','valor','arquivo'];
 
     public function usuario()
     {
-        return $this->belongsTo(User::class,'id_user' , 'id_user');
+        return $this->hasOne(User::class,'id_user','id_user');
     }
 
     public function centroCusto ()
